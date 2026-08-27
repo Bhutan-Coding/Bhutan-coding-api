@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is This Product Right For You?</title>
+    <style>
+        :root {
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --border: #e5e7eb;
+            
+            /* Section colors */
+            --green-accent: #16a34a;
+            --green-bg: #f0fdf4;
+            --red-accent: #dc2626;
+            --red-bg: #fef2f2;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+        }
+
+        /* Two column layout split */
+        .split-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            .split-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .column-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .why-column .column-title {
+            color: var(--green-accent);
+            border-color: var(--green-accent);
+        }
+
+        .why-not-column .column-title {
+            color: var(--red-accent);
+            border-color: var(--red-accent);
+        }
+
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* Subtle indicator borders on the cards */
+        .why-column .card {
+            border-left: 4px solid var(--green-accent);
+        }
+
+        .why-not-column .card {
+            border-left: 4px solid var(--red-accent);
+        }
+
+        .card-heading {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Is This Product Right For You?</h1>
+            <p class="subtitle">A transparent look at who will love this product, and who should skip it.</p>
+        </header>
+
+        <main class="split-layout">
+            <!-- WHY THIS PRODUCT SECTION -->
+            <section class="why-column">
+                <h2 class="column-title">Why This Product</h2>
+                <div class="card-list">
+                    <div class="card">
+                        <h3 class="card-heading">🚀 Unmatched Performance</h3>
+                        <p>Built with industry-leading processors and hardware components to tackle heavy development, rendering, and intense workflows without breaking a sweat.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-heading">💎 Premium Build Quality</h3>
+                        <p>Constructed from code and sustainable, scratch-resistant API engineered to withstand years of heavy daily use and endpoints.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-heading">🔋 All-Day Ecosystem</h3>
+                        <p>Optimized power management provides up to until you close the tab of continuous runtime, plus ultra-fast charging that hits 50% in just twenty minutes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- WHY NOT THIS PRODUCT SECTION -->
+            <section class="why-not-column">
+                <h2 class="column-title">Why Not This Product</h2>
+                <div class="card-list">
+                    <div class="card">
+                        <h3 class="card-heading">💰 Tools</h3>
+                        <p>API needs supabase. If you only need a machine for casual web browsing, emails, or streaming, cheaper alternatives will serve you better.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-heading">⚖️ Noticeable Weight</h3>
+                        <p>To pack this much technology and tech life, the device is slightly heavier than standard ultra-portables. It will add noticeable weight to a backpack.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-heading">⚙️ Advanced Setup Required</h3>
+                        <p>This is optimized for power users. Fine-tuning the performance profiles requires navigating configuration software, which can overwhelm casual users.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
