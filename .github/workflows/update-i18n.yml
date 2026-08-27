@@ -1,0 +1,9 @@
+- name: update-pr
+  # You may pin to the exact commit or the version.
+  # uses: vblagoje/update-pr@07f32e5cf48e494d208b00668f95810935ce4df1
+  uses: vblagoje/update-pr@v1.0.0
+  with:
+    # The new body text for the pull request
+    pr-body: 
+    # The number of the pull request to update
+    pr-number: # optional
