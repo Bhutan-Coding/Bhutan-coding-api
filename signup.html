@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+<form action="/submit-endpoint" method="POST">
+  <h2>Create an Account</h2>
+  
+  <div>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Ya username" required>
+  </div>
+
+  <div>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+  </div>
+
+  <div>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="At least 8 characters" required>
+  </div>
+
+  <button type="submit">Sign Up</button>
+</form>
+
+<a href="/login.html">Dont have one? LOGIN</a>
